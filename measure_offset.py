@@ -7,8 +7,8 @@ from binance_sdk_derivatives_trading_usds_futures.derivatives_trading_usds_futur
 try:
     config = configparser.ConfigParser()
     config.read('config.ini')
-    api_key = config.get('auth', 'api_key')
-    private_key = config.get('auth', 'private_key')
+    api_key = config.get("paper_auth", 'api_key')
+    private_key = config.get("paper_auth", 'private_key')
 
     rest_config = ConfigurationRestAPI(
         api_key=api_key,
